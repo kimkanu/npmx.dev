@@ -33,7 +33,7 @@ function getKoreanJosa<T>(
 
   // If `text` ends with two or more consecutive latin alphabets,
   // apply the following syllable final sound huristic:
-  if (/[a-z]{2,}$/.test(normalizedText)) {
+  if (/[a-z]{2,}$/i.test(normalizedText)) {
     return /(?:\w[lm]|[aeiouwy][ck-npqt])e?$/i.test(normalizedText)
       ? withFinalConsonant
       : withoutFinalConsonant
