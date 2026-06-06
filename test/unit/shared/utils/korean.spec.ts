@@ -47,6 +47,18 @@ describe('getKoreanJosa', () => {
     expect(koreanModifiers.koreanEul('')).toBe('를')
     expect(koreanModifiers.koreanWa('')).toBe('와')
     expect(koreanModifiers.koreanRo('')).toBe('로')
+
+    expect(koreanModifiers.koreanI(null)).toBe('가')
+    expect(koreanModifiers.koreanEun(null)).toBe('는')
+    expect(koreanModifiers.koreanEul(null)).toBe('를')
+    expect(koreanModifiers.koreanWa(null)).toBe('와')
+    expect(koreanModifiers.koreanRo(null)).toBe('로')
+
+    expect(koreanModifiers.koreanI({ hello: 'world' })).toBe('가')
+    expect(koreanModifiers.koreanEun({ hello: 'world' })).toBe('는')
+    expect(koreanModifiers.koreanEul({ hello: 'world' })).toBe('를')
+    expect(koreanModifiers.koreanWa({ hello: 'world' })).toBe('와')
+    expect(koreanModifiers.koreanRo({ hello: 'world' })).toBe('로')
   })
 
   it('i/ga and other regular particle pairs behave in the same way', () => {

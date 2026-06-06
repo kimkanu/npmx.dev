@@ -1,5 +1,3 @@
-import type { LinkedModifiers, VueMessageType } from 'vue-i18n'
-
 /**
  * Get the correct Korean particle following the given word.
  *
@@ -21,8 +19,8 @@ function getKoreanJosa<T>(
   isRo: boolean,
   withFinalConsonant: string,
   withoutFinalConsonant: string,
-) {
-  if (typeof text !== 'string') return text
+): string {
+  if (typeof text !== 'string') return withoutFinalConsonant
 
   // Strip out all non-Korean (vowels, consonants, and complete characters)
   // non-alphanumeric characters.
@@ -62,9 +60,9 @@ function getKoreanJosa<T>(
 }
 
 export const koreanModifiers = {
-  koreanI: text => getKoreanJosa(text, false, '이', '가'),
-  koreanEun: text => getKoreanJosa(text, false, '은', '는'),
-  koreanEul: text => getKoreanJosa(text, false, '을', '를'),
-  koreanWa: text => getKoreanJosa(text, false, '과', '와'),
-  koreanRo: text => getKoreanJosa(text, true, '으로', '로'),
-} satisfies LinkedModifiers<VueMessageType>
+  koreanI: <T>(text: T) => getKoreanJosa(text, false, '이', '가'),
+  koreanEun: <T>(text: T) => getKoreanJosa(text, false, '은', '는'),
+  koreanEul: <T>(text: T) => getKoreanJosa(text, false, '을', '를'),
+  koreanWa: <T>(text: T) => getKoreanJosa(text, false, '과', '와'),
+  koreanRo: <T>(text: T) => getKoreanJosa(text, true, '으로', '로'),
+}
