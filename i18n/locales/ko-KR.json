@@ -229,6 +229,9 @@
       "more_replies": "댓글 {count}개 더 보기"
     }
   },
+  "noodles": {
+    "missing": {}
+  },
   "settings": {
     "title": "설정",
     "tagline": "npmx 경험 사용자화하기",
@@ -713,7 +716,8 @@
         "general_description": "Y축은 다운로드 수, X축은 {start_date}부터 {end_date}까지의 기간(단위: {granularity})을 나타냅니다. {estimation_notice} {packages_analysis} {watermark}",
         "facet_bar_general_description": "{packages}의 가로 막대그래프: {facet} 비교 ({description}) {facet_analysis} {watermark}",
         "facet_bar_analysis": "{package_name}의 값은 {value}입니다."
-      }
+      },
+      "embedding": {}
     },
     "downloads": {
       "title": "주간 다운로드 수",
@@ -1426,8 +1430,6 @@
     "file_changes": "변경된 파일",
     "files_count": "파일 {count}개",
     "lines_hidden": "{count}개 행 숨기기",
-    "file_too_large": "파일이 너무 커서 비교할 수 없습니다.",
-    "file_size_warning": "{size}는 비교 가능 한도 250 kB를 넘었습니다.",
     "compare_versions": "비교",
     "compare_versions_title": "최신 버전과 비교",
     "comparing_versions_label": "버전을 비교하는 중입니다.",
