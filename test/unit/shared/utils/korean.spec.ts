@@ -31,11 +31,33 @@ describe('getKoreanJosa', () => {
     expect(koreanModifiers.koreanI('robot')).toBe('이') // 로봇 - consonant
     expect(koreanModifiers.koreanI('art')).toBe('가') // 아트 - vowel
     expect(koreanModifiers.koreanI('korean')).toBe('이') // 코리안 - consonant
+
+    // single alphabet cases
+    expect(koreanModifiers.koreanI('마징가Z')).toBe('가') // 마징가제트 - vowel
+    expect(koreanModifiers.koreanRo('마징가Z')).toBe('로') // 마징가제트 - vowel
     expect(koreanModifiers.koreanI('버전R')).toBe('이') // 버전알 - consonant ㄹ
     expect(koreanModifiers.koreanRo('버전R')).toBe('로') // 버전알 - consonant ㄹ
+    expect(koreanModifiers.koreanI('버전M')).toBe('이') // 버전엠 - consonant
+    expect(koreanModifiers.koreanRo('버전M')).toBe('으로') // 버전엔 - consonant
   })
 
   it('chooses the correct one for null cases', () => {
     expect(koreanModifiers.koreanI('')).toBe('가')
+    expect(koreanModifiers.koreanEun('')).toBe('는')
+    expect(koreanModifiers.koreanEul('')).toBe('를')
+    expect(koreanModifiers.koreanWa('')).toBe('와')
+    expect(koreanModifiers.koreanRo('')).toBe('로')
+  })
+
+  it('i/ga and other regular particle pairs behave in the same way', () => {
+    expect(koreanModifiers.koreanI('한국어')).toBe('가')
+    expect(koreanModifiers.koreanEun('한국어')).toBe('는')
+    expect(koreanModifiers.koreanEul('한국어')).toBe('를')
+    expect(koreanModifiers.koreanWa('한국어')).toBe('와')
+
+    expect(koreanModifiers.koreanI('얼룩말')).toBe('이')
+    expect(koreanModifiers.koreanEun('얼룩말')).toBe('은')
+    expect(koreanModifiers.koreanEul('얼룩말')).toBe('을')
+    expect(koreanModifiers.koreanWa('얼룩말')).toBe('과')
   })
 })
