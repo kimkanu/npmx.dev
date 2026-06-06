@@ -230,7 +230,29 @@
     }
   },
   "noodles": {
-    "missing": {}
+    "title": "noodles",
+    "meta_description": "npmx 홈페이지를 장식한 noodle 목록 — 계절별 로고, 이스터 에그 및 그 뒤에 숨겨진 이야기들.",
+    "latest": "최신 noodle",
+    "what_is": "noodle이란?",
+    "what_is_body": "Noodle은 npmx의 릴리스나 공휴일, 이벤트, 혹은 다른 축하해야 할 기념비적인 순간을 위해 npmx의 로고를 재미있게 변형한 것입니다. npm 패키지를 위한 구글 두들이라고 생각하시면 됩니다.",
+    "empty": "아직 noodle이 없습니다.",
+    "load_more": "{count}개 더 불러오기",
+    "dates": "적용된 날짜",
+    "shipped_in": "구현 PR",
+    "credits": "만든 이",
+    "learn_more": "더 보기",
+    "carousel_prev": "이전 이미지",
+    "carousel_next": "다음 이미지",
+    "carousel_dots": "다양한 이미지 둘러보기",
+    "carousel_jump": "{index}번째 이미지 보기",
+    "lens_label": "{title} — 이미지 캐로셀",
+    "lens_slide": "{index}번째 이미지",
+    "lens_slide_position": "이미지 {total}개 중 {index}번째",
+    "back_to_archive": "모든 noodle 보기",
+    "missing": {
+      "title": "이 noodle은 그릇 밖으로 나오지도 못했습니다.",
+      "body": "저희가 제공하는 noodle 메뉴에는 “{slug}”@.koreanI:{slug} 없습니다. 지금 막 그릇에 담고 있거나, 아직 만들어지지 않은 것 같네요. 어느 쪽이든, 모든 noodle을 볼 수 있는 메뉴로 돌아갑시다."
+    }
   },
   "settings": {
     "title": "설정",
@@ -717,7 +739,11 @@
         "facet_bar_general_description": "{packages}의 가로 막대그래프: {facet} 비교 ({description}) {facet_analysis} {watermark}",
         "facet_bar_analysis": "{package_name}의 값은 {value}입니다."
       },
-      "embedding": {}
+      "embedding": {
+        "chart": "이 그래프의 임베드 코드 복사하기",
+        "copy_url": "이 그래프의 임베드 코드를 복사하여 웹사이트에 삽입하실 수 있습니다.",
+        "preview": "미리보기"
+      }
     },
     "downloads": {
       "title": "주간 다운로드 수",
@@ -1470,6 +1496,9 @@
     "change_ratio": "변경률",
     "char_edits": "수정된 최대 문자 수",
     "diff_distance": "편집 거리",
+    "diff_truncated": "성능 향상을 위해 변경된 첫 번째 줄만 표시됩니다.",
+    "large_diff_mode": "성능 향상을 위해 큰 파일의 변경 사항 표시 중에는 수정된 행 합치기 기능이 비활성화됩니다.",
+    "large_diff_options_disabled": "성능 향상을 위해 큰 파일 모드에서는 수정된 행 합치기 기능이 비활성화됩니다.",
     "loading_diff": "변경 사항을 불러오는 중입니다.",
     "loading_diff_error": "변경 사항을 불러오는 데 실패했습니다.",
     "merge_modified_lines": "수정된 행 합치기",
