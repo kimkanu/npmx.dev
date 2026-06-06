@@ -1,7 +1,7 @@
 import { currentLocales, datetimeFormats, numberFormats, pluralRules } from '../config/i18n'
 
-function getKoreanJosa(
-  text: unknown,
+function getKoreanJosa<T>(
+  text: T,
   isRo: boolean,
   withFinalConsonant: string,
   withoutFinalConsonant: string,
