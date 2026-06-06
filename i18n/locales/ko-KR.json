@@ -188,7 +188,7 @@
       "facets_all_selected": "모든 비교 항목을 선택했습니다.",
       "facets_all_deselected": "모든 비교 항목을 선택 해제했습니다.",
       "view_switched": "{view} 뷰로 변경되었습니다.",
-      "setting_toggled": "{setting}@.koreanEul:{settings} {state}@.koreanRo:{state} 변경했습니다."
+      "setting_toggled": "{setting}@.koreanEul:{setting} {state}@.koreanRo:{state} 변경했습니다."
     }
   },
   "nav": {
@@ -334,11 +334,11 @@
     "error": "에러",
     "view_on": {
       "npm": "npm에서 보기",
-      "github": "GitHubで表示",
+      "github": "GitHub에서 보기",
       "gitlab": "GitLab에서 보기",
       "bitbucket": "Bitbucket에서 보기",
       "codeberg": "Codeberg에서 보기",
-      "git_repo": "Gitリポジトリ에서 보기",
+      "git_repo": "Git 리포지터리에서 보기",
       "forgejo": "Forgejo에서 보기",
       "gitea": "Gitea에서 보기",
       "gitee": "Gitee에서 보기",
@@ -667,7 +667,7 @@
       "granularity_yearly": "연도별",
       "start_date": "시작 날짜",
       "end_date": "마지막 날짜",
-      "loading": "読み込み中...",
+      "loading": "불러오는 중...",
       "date_range": "{start}부터 {end}까지",
       "date_range_multiline": "{start}부터\n{end}까지",
       "download_file": "{fileType} 다운로드",
@@ -897,7 +897,7 @@
       "team_name_label": "팀 이름",
       "team_name_placeholder": "팀 이름...",
       "create_button": "생성",
-      "no_match": "“{query}”@.koreanWa:{query}　일치하는 팀을 찾을 수 없습니다.",
+      "no_match": "“{query}”@.koreanWa:{query} 일치하는 팀을 찾을 수 없습니다.",
       "cancel_create": "팀 생성을 취소합니다.",
       "create_team": "+ 팀 생성"
     },
@@ -940,7 +940,7 @@
       "no_packages": "공개된 패키지가 없습니다. 조직: ",
       "no_packages_hint": "존재하지 않는 조직이거나, 공개된 패키지가 없습니다.",
       "failed_to_load": "조직의 패키지를 불러오는 데 실패했습니다.",
-      "no_match": "“{query}”@.koreanWa:{query}　일치하는 패키지를 찾을 수 없습니다.",
+      "no_match": "“{query}”@.koreanWa:{query} 일치하는 패키지를 찾을 수 없습니다.",
       "not_found": "조직을 찾을 수 없습니다.",
       "not_found_message": "조직 “{'@'}{name}”은 npm에 존재하지 않습니다."
     }
@@ -957,7 +957,7 @@
       "no_packages": "공개된 패키지가 없습니다. 사용자: ",
       "no_packages_hint": "존재하지 않는 사용자거나, 공개된 패키지가 없습니다.",
       "failed_to_load": "사용자의 패키지를 불러오는 데 실패했습니다.",
-      "no_match": "“{query}”@.koreanWa:{query}　일치하는 패키지를 찾을 수 없습니다.",
+      "no_match": "“{query}”@.koreanWa:{query} 일치하는 패키지를 찾을 수 없습니다.",
       "filter_placeholder": "패키지 {count}개를 필터링해 보세요."
     },
     "orgs_page": {
@@ -1248,7 +1248,7 @@
       "connect": "연결",
       "create_account": "계정 신규 생성",
       "connect_bluesky": "Bluesky로 연결",
-      "what_is_atmosphere": "Atmosphere 계정이란？",
+      "what_is_atmosphere": "Atmosphere 계정이란?",
       "atmosphere_explanation": "{npmx}는 소셜 기능을 구현하는 데 {atproto}를 사용하고 있습니다. AT Protocol에 의해 사용자는 자신의 데이터를 소유하고, 1개의 계정으로 AT Protocol을 지원하는 모든 서비스를 사용할 수 있게 됩니다. 계정을 생성하면 {bluesky}나 {tangled} 등의 다른 서비스에서도 같은 계정을 사용할 수 있습니다.",
       "default_input_error": "올바른 핸들, DID, 혹은 완전한 PDS URL을 입력해 주세요.",
       "profile": "프로필"
@@ -1301,7 +1301,7 @@
       "search_first": "패키지를 검색해 보세요.",
       "search_add": "패키지를 추가해 보세요.",
       "searching": "검색 중입니다.",
-      "remove_package": "{package}　삭제",
+      "remove_package": "{package} 삭제",
       "packages_selected": "패키지 {max} 중 {count}개 선택됨",
       "add_hint": "비교하기 위해서는 적어도 2개 이상의 패키지를 선택해 주세요."
     },
@@ -1622,8 +1622,8 @@
     "p1": "npmx는 기본 언어로 {lang}를 사용하고 있고, 번역할 메시지는 총 {count}가 있습니다. 번역에 도움을 주고 싶으시다면, {bylang}에서 해당하는 언어를 찾아서 펼쳐 주시면 상세 정보를 보실 수 있습니다.",
     "p1_lang": "미국 영어(en-US)",
     "p1_count": "{count}개",
-    "p2": "開始する前に、翻訳プロセスと参加方法について説明した {guide} を読んでください。",
-    "guide": "ローカライズ (i18n) ガイド",
+    "p2": "시작하기 전에, 번역 과정과 참여 방법을 설명한 {guide}를 읽어 주세요.",
+    "guide": "번역(i18n) 가이드",
     "by_locale": "언어별 진행 상황",
     "by_file": "파일별 번역 진행 상황",
     "complete_text": "이 언어는 번역이 완료되었습니다. 수고하셨습니다!",
