@@ -1,4 +1,4 @@
-import { koreanModifiers } from '../shared/utils/korean'
+import { koreanModifiers } from '#shared/utils/korean'
 import { currentLocales, datetimeFormats, numberFormats, pluralRules } from '../config/i18n'
 
 export default defineI18nConfig(() => {
