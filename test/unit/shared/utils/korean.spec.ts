@@ -61,6 +61,35 @@ describe('getKoreanJosa', () => {
     expect(koreanModifiers.koreanRo({ hello: 'world' })).toBe('로')
   })
 
+  it('excludes ㄹ final consonant for the 으로/로 pair on complete korean characters', () => {
+    // 서울 ends with 울 (final consonant ㄹ, code % 28 === 8)
+    expect(koreanModifiers.koreanI('서울')).toBe('이')
+    expect(koreanModifiers.koreanEun('서울')).toBe('은')
+    expect(koreanModifiers.koreanRo('서울')).toBe('로')
+    // 한글 ends with 글 (final consonant ㄹ)
+    expect(koreanModifiers.koreanI('한글')).toBe('이')
+    expect(koreanModifiers.koreanRo('한글')).toBe('로')
+    // 강원도 ends with 도 (no final consonant) - sanity check the other branch
+    expect(koreanModifiers.koreanRo('강원도')).toBe('로')
+  })
+
+  it('chooses the correct one for words ending with incomplete korean characters', () => {
+    // bare consonant jamo (ㄱ-ㅎ)
+    expect(koreanModifiers.koreanI('ㄱ')).toBe('이')
+    expect(koreanModifiers.koreanI('버전ㅁ')).toBe('이')
+    expect(koreanModifiers.koreanEun('ㅎ')).toBe('은')
+    expect(koreanModifiers.koreanRo('ㅁ')).toBe('으로')
+
+    // bare ㄹ jamo is excluded from the consonant set for the 으로/로 pair
+    expect(koreanModifiers.koreanRo('ㄹ')).toBe('로')
+    expect(koreanModifiers.koreanI('ㄹ')).toBe('이')
+
+    // bare vowel jamo (ㅏ-ㅣ)
+    expect(koreanModifiers.koreanI('ㅏ')).toBe('가')
+    expect(koreanModifiers.koreanEul('ㅣ')).toBe('를')
+    expect(koreanModifiers.koreanRo('ㅗ')).toBe('로')
+  })
+
   it('i/ga and other regular particle pairs behave in the same way', () => {
     expect(koreanModifiers.koreanI('한국어')).toBe('가')
     expect(koreanModifiers.koreanEun('한국어')).toBe('는')
